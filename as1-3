@@ -1,1 +1,10 @@
-
+#include<stdio.h>
+main()
+{
+	int i,j,k;
+	printf("enter the date in __:__:__ format");
+	scanf("%d%*c%d%*c%d",&i,&j,&k);
+	printf("day = %d",i);
+	printf("month = %d",j);
+	printf("year = %d",k);
+}
