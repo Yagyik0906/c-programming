@@ -1,1 +1,25 @@
-
+#include<stdio.h>
+main()
+{
+	int n,flag=0;
+	printf("enter the number to be checked");
+	scanf("%d",&n);
+	int m=n;
+	while(m!=0)
+	{
+		if(m%10==0)
+		{
+		flag=1;
+		break;
+		}
+		m=m/10;
+	}
+	if(flag==1 && n>0)
+	{
+		printf("\n its a duck number");
+	}
+	else 
+	{
+		printf("\n its not a duck number");
+	}
+}
