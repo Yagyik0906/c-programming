@@ -1,1 +1,48 @@
-
+#include<stdio.h>
+main()
+{
+	int pay=20000;
+	struct emp
+	{
+		float at[10];
+		float asly[10];
+		float b[10];
+	}salary;
+	printf("\n Good evening employees:");
+	for(int i=0;i<10;i++)
+	{
+		printf("\n enter the attendence percentage employee %d = ",i);
+		scanf("%f",&salary.at[i]);
+		if(salary.at[i]>95)
+		{
+			salary.b[i]=pay*.4;
+			salary.asly[i]=pay+salary.b[i];
+		}
+		else if(salary.at[i]>85)
+		{
+			salary.b[i]=pay*.3;
+			salary.asly[i]=pay+salary.b[i];
+		}
+		else if(salary.at[i]>75)
+		{
+			salary.b[i]=pay*.2;
+			salary.asly[i]=pay+salary.b[i];
+		}
+		else if(salary.at[i]>60)
+		{
+			salary.b[i]=pay*.1;
+			salary.asly[i]=pay+salary.b[i];
+		}
+		else
+		{
+			salary.b[i]=0;
+			salary.asly[i]=pay+salary.b[i];
+		}
+	}
+	for(int i=0;i<10;i++)
+	{
+		printf("\n attendence of employee %d is %f",(i+1),salary.at[i]);
+		printf("\n bonus of employee %d is %f",(i+1),salary.b[i]);
+		printf("\n annual salary of employee %d is %f",(i+1),salary.asly[i]);
+	}
+}
