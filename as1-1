@@ -1,1 +1,289 @@
-
+#include<stdio.h>
+#include<math.h>
+float square();
+float circle();
+float rectangle();
+float parallelogram();
+float pentagon();
+float semicircle();
+float hexagon();
+float octagon();
+main()
+{
+	int ch;
+	a:
+	printf("\n Menu :");
+	printf("\n 1.square");
+	printf("\n 2.circle");
+	printf("\n 3.rectangle");
+	printf("\n 4.parallelogram");
+	printf("\n 5.pentagon");
+	printf("\n 6.semi circle");
+	printf("\n 7.hexagon");
+	printf("\n 8.octagon");
+	printf("\n please enter the choice");
+	scanf("%d",ch);
+	switch(ch)
+	{
+		case 1:
+			if(square()==2.0)
+			goto a;
+			else 
+			printf("\n result=%f",square());
+		break;
+		case 2:
+			if(circle()==2.0)
+			goto a;
+			else
+			printf("\n result=%f",circle());
+		break;
+		case 3:
+			if(rectangle()==2)
+			goto a;
+			else
+			printf("\n result = %f",rectangle());
+		break;
+		case 4:
+			if(parallelogram()==2)
+			goto a;
+			else 
+			printf("\n result=%f",parallelogram());
+		break;
+		case 5:
+			if(pentagon()==2)
+			goto a;
+			else
+			printf("\n result=%f",pentagon());
+		break;
+		case 6:
+			if(semicircle()==2)
+			goto a;
+			else
+			printf("\n result=%f",semicircle());
+		break;
+		case 7:
+			if(hexagon()==2)
+			goto a;
+			else
+			printf("\n result=%f",hexagon());
+		break;
+		case 8:
+			if(octagon()==2)
+			goto a;
+			else
+			printf("\n result=%f",octagon());
+		break;
+		default:
+		printf("\n Invalid choice");
+		goto a;
+		break;			
+	}
+}
+float square()
+{
+	float r,ar,pr;
+	printf("\n enter the side");
+	scanf("%f",&r);
+	printf("\n Menu:");
+	printf("\n 1.Area");
+	printf("\n 2.Perimeter");
+	printf("\n 3.Back to main menu");
+	int q;
+	scanf("%d",&q);
+	switch(q)
+	{
+		case 1:
+			ar=r*r;
+			return ar;
+		break;
+		case 2:
+			pr=4*r;
+			return pr;
+		break;
+		case 3:
+		    return 2;		
+		break;    
+	}
+}
+float circle()
+{
+	float r,ar,pr;
+	printf("\n enter the radius");
+	scanf("%f",&r);
+	printf("\n Menu:");
+	printf("\n 1.Area");
+	printf("\n 2.Perimeter");
+	printf("\n 3.Back to main menu");
+	int q;
+	scanf("%d",&q);
+	switch(q)
+	{
+		case 1:
+			ar=3.14*r*r;
+			return ar;
+		break;
+		case 2:
+			pr=2*3.14*r;
+			return pr;
+		break;
+		case 3:
+		    return 2;		
+		break;    
+	}
+}
+float rectangle()
+{
+	float r1,r2,ar,pr;
+	printf("\n enter the side 1 and side 2");
+	scanf("%f%f",&r1,&r2);
+	printf("\n Menu:");
+	printf("\n 1.Area");
+	printf("\n 2.Perimeter");
+	printf("\n 3.Back to main menu");
+	int q;
+	scanf("%d",&q);
+	switch(q)
+	{
+		case 1:
+			ar=r1*r2;
+			return ar;
+		break;
+		case 2:
+			pr=2*(r1+r2);
+			return pr;
+		break;
+		case 3:
+		    return 2;		
+		break;    
+	}
+}
+float parallelogram()
+{
+	float h,p1,p2,ar,pr;
+	printf("\n enter the parallel side 1 and 2, height of the parallelogram ");
+	scanf("%f%f%f",&p1,&p2,&h);
+	printf("\n Menu:");
+	printf("\n 1.Area");
+	printf("\n 2.Perimeter");
+	printf("\n 3.Back to main menu");
+	int q;
+	scanf("%d",&q);
+	switch(q)
+	{
+		case 1:
+			ar=h*p2;
+			return ar;
+		break;
+		case 2:
+			pr=2*(p1+p2);
+			return pr;
+		break;
+		case 3:
+		    return 2;		
+		break;    
+	}
+}
+float pentagon()
+{
+	float r1,r2,ar,pr;
+	printf("\n enter the side 1 and side 2");
+	scanf("%f%f",&r1,&r2);
+	printf("\n Menu:");
+	printf("\n 1.Area");
+	printf("\n 2.Perimeter");
+	printf("\n 3.Back to main menu");
+	int q;
+	scanf("%d",&q);
+	switch(q)
+	{
+		case 1:
+			ar=r1*r2;
+			return ar;
+		break;
+		case 2:
+			pr=2*(r1+r2);
+			return pr;
+		break;
+		case 3:
+		    return 2;		
+		break;    
+	}
+}
+float semicircle()
+{
+	float r,ar,pr;
+	printf("\n enter the radius");
+	scanf("%f",&r);
+	printf("\n Menu:");
+	printf("\n 1.Area");
+	printf("\n 2.Perimeter");
+	printf("\n 3.Back to main menu");
+	int q;
+	scanf("%d",&q);
+	switch(q)
+	{
+		case 1:
+			ar=(3.14*r*r)/2;
+			return ar;
+		break;
+		case 2:
+			pr=3.14*r;
+			return pr;
+		break;
+		case 3:
+		    return 2;		
+		break;    
+	}
+}
+float hexagon()
+{
+	float r,ar,pr;
+	printf("\n enter the side");
+	scanf("%f%f",&r);
+	printf("\n Menu:");
+	printf("\n 1.Area");
+	printf("\n 2.Perimeter");
+	printf("\n 3.Back to main menu");
+	int q;
+	scanf("%d",&q);
+	switch(q)
+	{
+		case 1:
+			ar=r;
+			return ar;
+		break;
+		case 2:
+			pr=6*(r);
+			return pr;
+		break;
+		case 3:
+		    return 2;		
+		break;    
+	}
+}
+float octagon()
+{
+	float r,ar,pr;
+	printf("\n enter the side");
+	scanf("%f%f",&r);
+	printf("\n Menu:");
+	printf("\n 1.Area");
+	printf("\n 2.Perimeter");
+	printf("\n 3.Back to main menu");
+	int q;
+	scanf("%d",&q);
+	switch(q)
+	{
+		case 1:
+			ar=r;
+			return ar;
+		break;
+		case 2:
+			pr=8*(r);
+			return pr;
+		break;
+		case 3:
+		    return 2;		
+		break;    
+	}
+}
